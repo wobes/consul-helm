@@ -195,7 +195,7 @@ spec:
 
               {{ template "consul.extraconfig" }}
 
-              exec /bin/consul agent \
+              exec /usr/local/bin/docker-entrypoint.sh consul agent \
                 -node="${NODE}" \
                 -advertise="${ADVERTISE_IP}" \
                 -bind=0.0.0.0 \
